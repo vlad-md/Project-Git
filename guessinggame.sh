@@ -1,12 +1,9 @@
-
 function guessinggame {
-	
 	#pwd #just to see where we are working
 	repnum=$(ls | wc -l) #number of files in the directory
 	#echo $repnum #for troubleshooting the functionality of the program
 	number=-1 #set a negative number just because to start the while statement
-
-	while ! [ $number -eq $repnum ]
+	while ! [ $number -eq $repnum ] #checking if input is integer and if it is less, greater or equals to the number of files in the directory
 	do 
 		read -p "How many files are in this directory?" number
 		while ! [ "$number" -eq "$number" ] 2> /dev/null
@@ -26,3 +23,4 @@ function guessinggame {
 		fi
 	done
 }
+guessinggame
