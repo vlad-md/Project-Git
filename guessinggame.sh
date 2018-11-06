@@ -16,10 +16,10 @@ function guessinggame {
 				echo "Congradulations you guessed the number correctly"
 		elif [ $number -gt $repnum ]
 			then
-				echo "There are less files in the derictory"
+				echo "There are less than $number files in the derictory"
 		elif [ $number -lt $repnum ]
 			then
-				echo "There are more files in the derictory"
+				echo "There are more than $number files in the derictory"
 		fi
 	done
 }
